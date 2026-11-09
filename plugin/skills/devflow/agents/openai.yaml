@@ -1,0 +1,4 @@
+interface:
+  display_name: "DevFlow Kit"
+  short_description: "From reference systems to a tested local product"
+  default_prompt: "Use $devflow to clarify requirements, compare references, create an interactive prototype, and build and verify the agreed system."

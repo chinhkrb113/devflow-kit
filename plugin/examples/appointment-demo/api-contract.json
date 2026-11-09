@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "timezone": "+07:00",
+  "demo_tokens": {"demo-an": "an", "demo-binh": "binh"},
+  "slots": ["09:00", "09:30", "10:00", "10:30", "14:00", "14:30"],
+  "routes": {
+    "GET /api/slots?date=YYYY-MM-DD": {"auth": true, "response": {"date": "string", "slots": [{"time": "string", "available": "boolean"}]}, "status": [200, 400, 401]},
+    "GET /api/bookings": {"auth": true, "response": {"bookings": "array of own bookings"}, "status": [200, 401]},
+    "POST /api/bookings": {"auth": true, "input": {"date": "YYYY-MM-DD", "slot": "HH:MM", "note": "trimmed string, 1..80 characters"}, "response": {"booking": "booking"}, "status": [201, 400, 401, 403, 409, 413, 415]},
+    "POST /api/bookings/{id}/cancel": {"auth": true, "input": {}, "response": {"booking": "booking"}, "status": [200, 400, 401, 403, 404, 413, 415]}
+  },
+  "booking": {"id": "uuid", "date": "YYYY-MM-DD", "slot": "HH:MM", "note": "string", "status": "active or cancelled"},
+  "errors": {"error": "Vietnamese user-facing message"},
+  "constraints": ["Only owner may view own records or cancel", "At most one active booking per date/slot", "Persist to SQLite", "Past times rejected in +07:00", "Loopback only; no production authentication"]
+}

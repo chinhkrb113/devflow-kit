@@ -1,0 +1,9 @@
+{
+  "name": "reference-led-appointment-demo",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Optional browser-test dependency; app runtime uses Python stdlib only.",
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

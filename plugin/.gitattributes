@@ -1,0 +1,9 @@
+# The provenance lock hashes the packaged upstream bytes. Keep them stable
+# across Windows/Linux checkouts instead of converting their line endings.
+skills/frontend-design/** -text
+skills/ui-ux-pro-max/** -text
+skills/taste-skill/** -text
+skills/ponytail/** -text
+skills/caveman/** -text
+skills/ui-taste/** -text
+skills/superpowers/** -text

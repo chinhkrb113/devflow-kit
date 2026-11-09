@@ -1,0 +1,21 @@
+{
+  "upstream_version": "7.0.2",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "profiles": {
+    "brainstorming": "upstream/skills/brainstorming/GUIDE.md",
+    "diagnosing-superpowers": "upstream/skills/diagnosing-superpowers/GUIDE.md",
+    "dispatching-parallel-agents": "upstream/skills/dispatching-parallel-agents/GUIDE.md",
+    "executing-plans": "upstream/skills/executing-plans/GUIDE.md",
+    "finishing-a-development-branch": "upstream/skills/finishing-a-development-branch/GUIDE.md",
+    "receiving-code-review": "upstream/skills/receiving-code-review/GUIDE.md",
+    "requesting-code-review": "upstream/skills/requesting-code-review/GUIDE.md",
+    "subagent-driven-development": "upstream/skills/subagent-driven-development/GUIDE.md",
+    "systematic-debugging": "upstream/skills/systematic-debugging/GUIDE.md",
+    "test-driven-development": "upstream/skills/test-driven-development/GUIDE.md",
+    "using-git-worktrees": "upstream/skills/using-git-worktrees/GUIDE.md",
+    "using-superpowers": "upstream/skills/using-superpowers/GUIDE.md",
+    "verification-before-completion": "upstream/skills/verification-before-completion/GUIDE.md",
+    "writing-plans": "upstream/skills/writing-plans/GUIDE.md",
+    "writing-skills": "upstream/skills/writing-skills/GUIDE.md"
+  }
+}

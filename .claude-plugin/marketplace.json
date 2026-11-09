@@ -1,0 +1,15 @@
+{
+  "name": "devflow-kit",
+  "description": "DevFlow Kit — AI Development Skills, from requirements to acceptance.",
+  "owner": {
+    "name": "chinhkrb113",
+    "url": "https://github.com/chinhkrb113"
+  },
+  "plugins": [
+    {
+      "name": "devflow-kit",
+      "source": "./plugin",
+      "description": "DevFlow Kit — AI Development Skills. Reference-led software development with four complementary UI skills, Superpowers engineering workflows, Ponytail implementation guidance and Caveman concise replies."
+    }
+  ]
+}
