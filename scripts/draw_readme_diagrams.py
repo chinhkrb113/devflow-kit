@@ -42,6 +42,8 @@ def save(slug,title,desc,body):
 b=chrome('DEVFLOW KIT / 01 / ARCHITECTURE','Specialized guidance. One coherent workflow.')
 b+=arrow('M312 360 H424')+arrow('M692 360 H876')+arrow('M560 312 V240')+arrow('M560 408 V488')
 b+=arrow('M428 384 H368 Q360 384 360 392 V536 Q360 544 352 544 H316',True)+arrow('M188 312 V240',True)
+b+=arrow('M640 312 V280 Q640 272 648 272 H1032 Q1040 272 1040 264 V240')
+b+=node(880,132,320,104,'TECHNICAL VISUALS','Diagram Design',['Architecture + workflows','Editable HTML / SVG / PNG'])
 b+=node(64,132,248,104,'EXTERNAL / OPTIONAL','Reference systems',['Catalog, APIs, products','License + fit checked'],'external')
 b+=node(408,132,324,104,'DESIGN / FOUR SKILLS','UI craft',['Frontend Design + UI/UX Pro Max','Taste + UI Taste'])
 b+=node(64,312,248,96,'EXECUTION OWNER','Your AI harness',['Reads files; invokes tools'])
@@ -51,7 +53,7 @@ b+=node(408,492,324,104,'ENGINEERING / TWO SKILLS','Build with discipline',['Sup
 b+=node(64,492,248,104,'COMMUNICATION / OPT-IN','Caveman',['Concise replies on request'],'optional')
 b+=text(880,520,'The agent runs in your host.',14,INK,400,'serif',italic=True)+text(880,548,'Markdown is guidance, not a service.',14,INK,400,'serif',italic=True)
 b+=text(880,584,'Missing tools stay explicit.',12,MUTED)
-b+=footer('SOLID  routing    DASHED  optional extension','8 COMPONENTS / 1 ROUTER')
+b+=footer('SOLID  routing    DASHED  optional extension','9 COMPONENTS / 1 ROUTER')
 save('architecture','DevFlow Kit architecture','The harness reads the devflow router, selects design or engineering guidance, optionally uses references and Caveman, and produces project artifacts.',b)
 
 b=chrome('DEVFLOW KIT / 02 / DEVELOPMENT FLOW','From an open question to an accepted outcome.')
@@ -80,7 +82,7 @@ save('workflow','DevFlow Kit development flow','Five phases group requirements a
 
 b=chrome('DEVFLOW KIT / 03 / DISTRIBUTION','One complete capsule. Your choice of harness.')
 b+=arrow('M352 336 H476')+arrow('M720 336 H844')
-b+=node(64,252,288,168,'PORTABLE PACKAGE','devflow/',['SKILL.md','bundle/ — eight components','Integrity manifests'])
+b+=node(64,252,288,168,'PORTABLE PACKAGE','devflow/',['SKILL.md','bundle/ — nine components','Integrity manifests'])
 b+=node(480,280,240,112,'COPY + VERIFY','Installer',['Select one target','Preserve existing content'],'focal')
 b+=f'<rect x="848" y="176" width="352" height="336" rx="6" fill="#fff" stroke="{MUTED}" stroke-width="1"/>'+text(872,208,'HARNESS / PROJECT SKILLS ROOT',8,MUTED,500,'mono')
 for i,(name,folder) in enumerate([('Codex','.agents/skills'),('Claude Code','.claude/skills'),('DeepSeek Harness','.dsh/skills'),('Trae / Trae CN','.trae/skills'),('Other hosts','explicit skills root')]):
@@ -93,13 +95,4 @@ for x,n,label in [(64,'01','Copy checked'),(304,'02','Discovered'),(544,'03','Ac
 b+=footer('INSTALLATION ≠ MODEL EXECUTION / VERIFY EACH STEP','5 NAMED TARGETS + GENERIC')
 save('portability','DevFlow Kit portable installation','The installer copies one complete devflow capsule into a selected harness, with separate file, discovery, activation, execution and outcome checks.',b)
 
-b=chrome('DEVFLOW KIT / AI DEVELOPMENT SKILLS','A considered path from idea to software.')
-b+=text(64,288,'DevFlow Kit',40,INK,400,'serif')+text(64,340,'Clarify. Reference. Design. Build. Verify.',16,MUTED)
-b+=text(64,396,'8 components / 15 Superpowers profiles',12,MUTED,400,'mono')+text(64,424,'Portable guidance for your coding agent.',16,MUTED)+rule(688,192,688,536)
-for i,(num,title,detail) in enumerate([('01','Understand the work','Requirements + reference systems'),('02','Make behavior tangible','Specifications + interactive mock'),('03','Build with evidence','Implementation + verification')]):
-    y=220+i*112
-    b+=text(736,y,num,8,MUTED,500,'mono')+text(784,y,title,16,ACCENT if i==2 else INK,600)+text(784,y+28,detail,12,MUTED,400,'mono')
-    if i<2:b+=rule(736,y+60,1200,y+60)
-b+=footer('OPEN SOURCE / REFERENCE-LED / HARNESS-AWARE','MAINTAINED BY CHINHKRB113')
-save('hero','DevFlow Kit','DevFlow Kit organizes eight complementary skills into a reference-led workflow from requirements to technical verification.',b)
-print('Wrote four editorial HTML/SVG sources in docs/diagrams/.')
+print('Wrote three technical diagram HTML/SVG sources in docs/diagrams/.')

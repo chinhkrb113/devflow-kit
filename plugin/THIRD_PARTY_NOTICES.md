@@ -37,3 +37,11 @@ Uizze's `CHECKSUMS.sha256` and `MANIFEST.json` are retained as upstream provenan
 Local helper changes: task-start/task-done invoke sibling helpers through Bash; graph rendering accepts GUIDE.md or SKILL.md; the visual companion disables remote brand-image telemetry, reads VERSION.json and reports the actual bound ephemeral port. The diagnostics timeline prompt recognizes mapped GUIDE.md reads and profiles.json inventory while retaining original SKILL.md support. Hooks, harness plugin manifests/installers, root developer tooling and upstream repository test harnesses are omitted. No claim of an unchanged upstream plugin or its automatic bootstrap behavior is made. The lock contains original source hashes and all distributed file hashes; local tests cover the integration.
 
 For Superpowers, `upstream_sha256` hashes the original Git blobs at the pinned revision. `upstream_checkout_sha256` records the retrieved working-tree bytes; ten files differ only in line endings, listed in `checkout_line_ending_differences`. `sha256` always hashes the actual distributed bytes after documented adaptations. This distinction makes the source pin reproducible across checkout platforms.
+
+## Diagram Design
+
+- Source: https://github.com/cathrynlavery/diagram-design
+- Revision: `6a7f19fcc132b39b126bea90167679b46b14bcc4`; source directory `skills/diagram-design`, plus the repository geometry verifier.
+- License: MIT; original notice is included in `skills/diagram-design/LICENSE`.
+- Adaptations: compact DevFlow entry, upstream body retained as `GUIDE.md`, project-local styling and host capability rules, geometry helper relocation and corrected local assets root. See the component `NOTICE` and lock record.
+- Upstream Git-blob SHA-256 and distributed SHA-256 are distinct; the project's customized documentation style is not substituted for the upstream default.

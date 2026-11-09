@@ -9,7 +9,7 @@
     {
       "name": "devflow-kit",
       "source": "./plugin",
-      "description": "DevFlow Kit — AI Development Skills. Reference-led software development with four complementary UI skills, Superpowers engineering workflows, Ponytail implementation guidance and Caveman concise replies."
+      "description": "DevFlow Kit — AI Development Skills. Reference-led software development with four complementary UI skills, Superpowers engineering workflows, Ponytail implementation guidance and Caveman concise replies. Includes Diagram Design for architecture and technical visuals."
     }
   ]
 }

@@ -1,4 +1,4 @@
-# DevFlow Kit — AI Development Skills — 0.7.1
+# DevFlow Kit — AI Development Skills — 0.8.0
 
 **Bản đa harness:** nếu ZIP có gốc `devflow/`, bắt đầu từ `START-HERE.md` ở thư mục ngoài. Bộ cài mới là `python bundle/install.py --target codex|claude-code|dsh|trae --project <thư-mục-dự-án>` (chọn một target). Nội dung dưới đây dành cho bản legacy `plugin/` hoặc đọc từ `bundle/` để chạy mẫu. [Ma trận tương thích](HARNESS-COMPATIBILITY.md) ghi rõ phạm vi hỗ trợ.
 
@@ -28,7 +28,7 @@ Tên có thể khác tùy host; kiểm tra tên/path trong danh sách skill. N�
 
 ## 2. Tám thành phần trong gói
 
-Trong bản 0.7.1, gọi trực tiếp từng skill UI hay qua router đều áp dụng [chính sách UI chung](skills/devflow/references/ui-task-policy.md). Sửa component nhỏ giữ brand/stack, chỉ đọc hướng dẫn liên quan và kiểm hành vi cần sửa; không chạy lại cả quy trình thiết kế. Taste có điểm vào ngắn, giữ playbook đầy đủ trong reference để đọc khi cần.
+Trong bản 0.8.0, gọi trực tiếp từng skill UI hay qua router đều áp dụng [chính sách UI chung](skills/devflow/references/ui-task-policy.md). Sửa component nhỏ giữ brand/stack, chỉ đọc hướng dẫn liên quan và kiểm hành vi cần sửa; không chạy lại cả quy trình thiết kế. Taste có điểm vào ngắn, giữ playbook đầy đủ trong reference để đọc khi cần.
 
 | Skill | Vai trò |
 |---|---|
@@ -74,6 +74,10 @@ python verify_bundle.py --with-example --playwright-module "C:/path/to/external/
 
 Gói có source mẫu sạch, không kèm DB, cache, profile trình duyệt hay báo cáo chứa đường dẫn máy tác giả. Báo cáo mới được sinh trên máy người chạy. Catalog 17.000+ dự án được tải khi cần, hoặc dùng cache/dataset do người dùng cung cấp; ZIP không chứa toàn bộ catalog. Tra cứu UX và thư viện Taste đã nằm trong gói.
 
-Thay đường dẫn Playwright mẫu bằng vị trí đã cài ngoài thư mục skill. Xem [thay đổi 0.7.1](RELEASE-NOTES.md), [giấy phép thành phần](THIRD_PARTY_NOTICES.md) và `RELEASE-MANIFEST.json` trong ZIP. Bản chạy local không phải chứng nhận production hoặc thử nghiệm của người dùng mới. macOS/Linux có hướng dẫn link trong INSTALL.md nhưng chưa được chạy thực tế trong lượt phát hành này.
+Thay đường dẫn Playwright mẫu bằng vị trí đã cài ngoài thư mục skill. Xem [thay đổi 0.8.0](RELEASE-NOTES.md), [giấy phép thành phần](THIRD_PARTY_NOTICES.md) và `RELEASE-MANIFEST.json` trong ZIP. Bản chạy local không phải chứng nhận production hoặc thử nghiệm của người dùng mới. macOS/Linux có hướng dẫn link trong INSTALL.md nhưng chưa được chạy thực tế trong lượt phát hành này.
 
 Superpowers được đóng gói theo [policy tích hợp](skills/superpowers/references/compatibility.md), đọc từng profile khi cần. Dùng chung với Ponytail và bốn skill UI trong cùng phạm vi; không chạy lại discovery/approval đã xong. Helper kế hoạch cần Bash/Git, companion cần Node và renderer cần Graphviz khi dùng; các công cụ đó không bắt buộc để đọc hướng dẫn.
+
+## Vẽ kiến trúc và luồng
+
+Bản 0.8.0 có chín thành phần, bao gồm [Diagram Design](skills/diagram-design/SKILL.md). Yêu cầu `devflow` đọc hệ thống hiện tại, phân biệt phần đã có/phần đề xuất và vẽ kiến trúc. Giữ HTML/SVG để chỉnh sửa, chạy kiểm tra cấu trúc/hình học và xem ảnh render; PNG cần browser phù hợp. Không sửa style trực tiếp trong bản cài.

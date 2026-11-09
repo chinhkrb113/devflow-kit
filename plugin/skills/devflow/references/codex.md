@@ -1,6 +1,6 @@
 # Codex discovery and activation
 
-For all eight components, use the bundle [installation guide](../../../INSTALL.md) and installer. Keep the enclosing bundle together for sibling links and runtime resources. The single-skill instructions below still apply when only the catalog/system workflow is wanted, but the integrated UI path needs its four UI siblings; implementation/communication guidance uses Ponytail/Caveman.
+For all nine components, use the bundle [installation guide](../../../INSTALL.md) and installer. Keep the enclosing bundle together for sibling links and runtime resources. The single-skill instructions below still apply when only the catalog/system workflow is wanted, but the integrated UI path needs its four UI siblings; implementation/communication guidance uses Ponytail/Caveman.
 
 The skill's source under `plugin/skills/` is not automatically a repository skill. Plugin marketplace metadata alone does not install it into Codex. For local development, expose this folder through a supported discovery root; keep one active copy to avoid duplicate names and stale instructions.
 

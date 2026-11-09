@@ -1,8 +1,8 @@
 # DevFlow Kit — Harness compatibility
 
-Adapter source review: 2026-11-04. Branding revision: 2026-11-09; Independent repository revision: 0.7.1. See the repository verification report for checks performed after extraction.
+Adapter source review: 2026-11-04. Branding revision: 2026-11-09; Independent repository revision: 0.7.1; Diagram Design integration: 0.8.0 (2026-11-10). See the repository verification report for checks performed after extraction.
 
-The portable delivery uses one standard `devflow/SKILL.md` with all eight components and their resources inside `bundle/`. A successful copy is not proof that a host discovers or executes the skill. Scripts are optional capabilities, not prerequisites for reading the guidance. User/host policy always controls tool use.
+The portable delivery uses one standard `devflow/SKILL.md` with all nine components and their resources inside `bundle/`. A successful copy is not proof that a host discovers or executes the skill. Scripts are optional capabilities, not prerequisites for reading the guidance. User/host policy always controls tool use.
 
 Version 0.7.0 renames the bundle to DevFlow Kit and its entry to `devflow`. Version 0.6.0 added the Superpowers suite behind one scoped entry and preserves existing harness adapters. Direct component discovery and the outer router share the same [UI task policy](skills/devflow/references/ui-task-policy.md). Keep the full capsule together; component-only copies lose sibling policy/resources. The release report distinguishes M1 execution evidence from historical discovery observations below.
 
@@ -28,6 +28,6 @@ Source references used for the adapter design:
 
 The release report records actual tested OS/runtime versions. Windows execution does not establish macOS/Linux execution. Standard-library copy code avoids symlink privileges and machine-specific absolute paths; a recipient should still run the smoke test and relevant helper verification on their platform.
 
-Existing eight-entry installations remain available through the legacy plugin and `install-codex.ps1`. The portable route is additive and uses a different outer entry. Avoid installing both forms into the same working environment unnecessarily: hosts may display duplicate component names. In tests, match the resolved file path rather than a short skill name alone.
+Existing component-entry installations remain available through the legacy plugin and `install-codex.ps1`. The portable route is additive and uses a different outer entry. Avoid installing both forms into the same working environment unnecessarily: hosts may display duplicate component names. In tests, match the resolved file path rather than a short skill name alone.
 
 Superpowers profiles use local file links, not assumed plugin namespaces or a required Skill API. Sequential execution is supported when delegation is unavailable. Original hooks/configuration are not registered. Platform-specific tables remain reference material; actual host schemas, permissions, models and user scope win. Optional helper tests add Bash/POSIX dependencies, while Markdown reading does not. See [Superpowers compatibility](skills/superpowers/references/compatibility.md).

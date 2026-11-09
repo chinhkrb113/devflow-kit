@@ -1,0 +1,12 @@
+Diagram Design by Cathryn Lavery
+Source: https://github.com/cathrynlavery/diagram-design
+Revision: 6a7f19fcc132b39b126bea90167679b46b14bcc4
+License: MIT (see LICENSE)
+
+DevFlow Kit adaptations, version 0.8.0:
+- Upstream SKILL.md retained as GUIDE.md; a compact direct/router entry added.
+- Added project-local, read-only installation and lifecycle integration guidance.
+- Repository geometry verifier included as scripts/verify_geometry.py; asset root adapted.
+- Upstream templates, references and helpers retained, including pristine style tokens.
+- Original Git blob hashes and distributed file hashes recorded separately in the bundle lock.
+- No upstream installation hooks, global profiles or personal settings are installed.

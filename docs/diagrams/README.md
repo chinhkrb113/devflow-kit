@@ -1,51 +1,43 @@
-# DevFlow Kit diagrams
+# Documentation visuals
 
-Original diagrams authored for this repository using [Diagram Design](https://github.com/cathrynlavery/diagram-design), version 2.6, source revision `6a7f19fcc132b39b126bea90167679b46b14bcc4` (MIT). The upstream skill supplies design guidance and validation/export tools; it is not vendored into the skill bundle.
+The README uses a generated brand hero and three editable technical diagrams. They have separate rendering paths so rebuilding diagrams never overwrites the hero.
 
-| Source | Purpose | Visual grammar |
+| Asset / source | Purpose | Format |
 |---|---|---|
-| [hero.html](hero.html) | Project introduction | Editorial cover |
-| [architecture.html](architecture.html) | Harness, routing and supporting capabilities | Architecture; 7 nodes, 6 connectors |
-| [workflow.html](workflow.html) | Work, constraints and outputs across the lifecycle | Process; stage framework, 5 stages × 3 semantic rows |
-| [portability.html](portability.html) | Complete capsule, installer and host roots | Distribution architecture |
+| [hero.png](../assets/hero.png) | Product identity and positioning | Generated raster artwork; see [art direction and prompt](hero-artwork.md) |
+| [architecture.html](architecture.html) | Harness, router and nine complementary components | Architecture; eight nodes and seven connectors |
+| [workflow.html](workflow.html) | Work, constraints and outputs across five lifecycle stages | Process with consistent semantic rows |
+| [portability.html](portability.html) | Complete capsule, installer and target roots | Distribution architecture |
 
-Each source is self-contained HTML with inline SVG. Google Fonts is the only external resource. HTML provides a local horizontal scroller on narrow screens. PNG exports embed the rendered appearance for GitHub and offline reading. SVG remains editable; its font appearance can vary in viewers without the named fonts. All diagrams include accessible titles and descriptions.
+## Technical diagram sources
 
-## Design
+Diagram Design is bundled at [plugin/skills/diagram-design](../../plugin/skills/diagram-design/SKILL.md), pinned to revision `6a7f19fcc132b39b126bea90167679b46b14bcc4`. Its compact entry selects the relevant references and keeps project styles outside the installed bundle. The original guide, templates and helpers remain available on demand.
 
-The 1280 × 720 slide preset uses a warm paper background, restrained blue accent, thin rules, orthogonal connections and no shadows. See [style-guide.md](style-guide.md). Solid lines show routing relationships; dashed lines show optional extensions. Routing is guidance selection, not a running network service. The development flow groups detailed lifecycle steps into five readable phases and explicitly keeps reverse optional.
+The diagrams use a 1280 × 720 editorial canvas with project-specific [style tokens](style-guide.md). Each HTML file has accessible inline SVG and a local horizontal scroller for narrow screens. Google Fonts is its only external dependency. PNG exports preserve the rendered appearance; editable SVG may use fallback fonts in other viewers.
 
-## Reproduce
+## Rebuild
 
-Generate the HTML sources with Python 3.12+:
+From the repository root:
 
 ```text
 python scripts/draw_readme_diagrams.py
 ```
 
-From an external checkout of the pinned Diagram Design revision, run these commands for each of `hero`, `architecture`, `workflow`, and `portability` (replace `<name>` and `<diagram-design>`):
+Run the following for `architecture`, `workflow` and `portability`, replacing `<name>`:
 
 ```text
-python <diagram-design>/skills/diagram-design/scripts/self_check.py docs/diagrams/<name>.html
-python <diagram-design>/scripts/verify-geometry.py docs/diagrams/<name>.html
-python <diagram-design>/skills/diagram-design/scripts/export_svg.py docs/diagrams/<name>.html docs/assets/<name>.svg
-```
-
-Render PNG with Node.js, Playwright and Chromium:
-
-```text
+python plugin/skills/diagram-design/scripts/self_check.py docs/diagrams/<name>.html
+python plugin/skills/diagram-design/scripts/verify_geometry.py docs/diagrams/<name>.html
+python plugin/skills/diagram-design/scripts/export_svg.py docs/diagrams/<name>.html docs/assets/<name>.svg
 node scripts/export_readme_assets.cjs
 ```
 
-Set `PLAYWRIGHT_MODULE` to an existing Playwright module location if it is not on the Node resolution path. The exporter uses Node Playwright because that runtime is available in this environment; the upstream Python Playwright PNG helper was not executed. It waits for all three font families, exports at 2× resolution (2560 × 1440), checks canvas text bounds and verifies the mobile scroll boundary. A local report is written under ignored `.local/`.
+The last command renders all three PNGs using Node Playwright and Chromium. Set `PLAYWRIGHT_MODULE` to an external installation if required. This host's existing Node browser runtime is used instead of the optional upstream Python Playwright PNG helper.
 
-## Validation on 2026-11-09
+The exporter waits for Instrument Serif, Geist and Geist Mono, outputs 2560 × 1440 PNGs, checks canvas text bounds, and verifies that a 390 px viewport scrolls inside the diagram container without overflowing the document. Its local report is written under ignored `.local/`.
 
-- Upstream static self-check: 4/4 pass.
-- Upstream geometry verifier: 4/4 pass, zero findings.
-- SVG exports: 4/4 pass.
-- Chromium rendering, expected fonts and canvas bounds: 4/4 pass.
-- 390 px viewport: no document overflow; diagrams scroll within their container.
-- Visual inspection of all four exported PNGs completed.
+## Validation
 
-Automated geometry checks do not measure aesthetic quality. These results establish renderability and the specific checks above.
+For version 0.8.0, all three technical diagrams passed the bundled structural and geometry checks, SVG export and Chromium render checks. The generated PNGs were inspected visually. The raster hero is checked separately for text accuracy, legibility and README rendering; SVG geometry checks do not apply to that artwork.
+
+These checks establish the reported properties, not a universal aesthetic score or architectural correctness. See the [release verification record](../verification-0.8.0.md).

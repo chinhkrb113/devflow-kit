@@ -1,6 +1,6 @@
 ---
 name: devflow
-description: Use when planning or building software from reference systems, reproducing authorized observable behavior, or finding clients, drivers, parsers and interoperability tools for closed apps, APIs, devices, protocols, formats or games. Also applies when extending a reference-led project through an interactive prototype and acceptance.
+description: Use when planning or building software from reference systems, reproducing authorized observable behavior, or finding clients, drivers, parsers and interoperability tools for closed apps, APIs, devices, protocols, formats or games. Also applies when extending a reference-led project through architecture diagrams, an interactive prototype and acceptance.
 ---
 
 # DevFlow Kit — Development lifecycle
@@ -22,6 +22,8 @@ The catalog is one source for tools, not an exhaustive catalog of reference prod
 Clarify requirements → find and compare references → check feasibility → draft specifications → run an interactive mock → incorporate feedback → analyze/reverse only when needed → finalize specifications and contracts → build and verify vertical slices → acceptance.
 
 Mock feedback and analysis findings loop back into the requirements, contracts and prototype. Investigate blocking feasibility questions earlier rather than waiting for the reverse stage. Reverse engineering is optional; available documentation, licensed source or authorized observation may suffice. Never invent backend facts from a screenshot.
+
+For architecture, workflow, sequence or data-model diagrams, use [Diagram Design](../diagram-design/SKILL.md). Ground current-state visuals in evidence, label proposed behavior, reuse project styling and verify the rendered output. A diagram does not replace the specification or interactive mock.
 
 For mock UI or frontend work, read the [bundled UI workflow](references/ui-workflow.md) and its [interactive acceptance checks](references/ui-acceptance.md). They coordinate UI/UX Pro Max, Frontend Design, Taste and Uizze UI Taste around one design direction, preserve existing brand and stack, and distinguish app screens from marketing pages. Verify state transitions as well as appearance; newly added tests must run through the acceptance command used for the final claim.
 

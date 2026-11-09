@@ -22,6 +22,8 @@ Use [artifact records](artifacts.md), following the project's existing locations
 
 These are initial specifications, not frozen facts. Mark unknown reference behavior and proposed behavior of the new system separately. Define the new system's contract deliberately; never claim that a guessed endpoint or field was discovered in the reference. Use a machine-checkable API contract where applicable and keep mock fixtures aligned with it. A CLI/offline component can have command/module contracts instead; record why web screens or HTTP APIs are inapplicable.
 
+Use [Diagram Design](../../diagram-design/SKILL.md) for architecture, sequence or data-flow views that clarify the specification. Retain editable sources, distinguish current/proposed behavior and inspect the rendered result. Reuse the project style; keep generated files outside the installed skill.
+
 ## 4. Build and exercise an interactive mock UI
 
 Use the [bundled UI workflow](ui-workflow.md) to select relevant UX guidance, one visual direction and the appropriate app/site critique. Keep existing brand, stack and confirmed requirements authoritative across all four UI skills. Direct calls use the same [task policy](ui-task-policy.md); existing-component fixes take its focused route instead of restarting this lifecycle.

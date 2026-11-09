@@ -1,7 +1,7 @@
 {
   "name": "devflow-kit",
-  "description": "DevFlow Kit — AI Development Skills. Reference-led software development from requirements through acceptance. Bundles Frontend Design, UI/UX Pro Max, Taste and Uizze UI Taste for interactive UI, Ponytail for focused implementation, and Caveman for concise replies. Includes the adapted Superpowers development workflow suite.",
-  "version": "0.7.1",
+  "description": "DevFlow Kit — AI Development Skills. Reference-led software development from requirements through acceptance. Bundles Frontend Design, UI/UX Pro Max, Taste and Uizze UI Taste for interactive UI, Ponytail for focused implementation, and Caveman for concise replies. Includes the adapted Superpowers development workflow suite. Diagram Design produces verified architecture and technical diagrams.",
+  "version": "0.8.0",
   "author": {
     "name": "chinhkrb113",
     "url": "https://github.com/chinhkrb113"
@@ -15,6 +15,8 @@
     "agent-skills",
     "interactive-prototype",
     "verification",
-    "reverse-engineering"
+    "reverse-engineering",
+    "architecture",
+    "diagrams"
   ]
 }

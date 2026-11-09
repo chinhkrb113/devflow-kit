@@ -1,5 +1,15 @@
 # 0.7.1 — Independent repository maintained by chinhkrb113
 
+## 0.8.0 — Architecture diagrams and English documentation (2026-11-10)
+
+- Added Diagram Design as the ninth component, pinned to upstream revision `6a7f19fcc132b39b126bea90167679b46b14bcc4`.
+- Routed diagram requests from the portable entry and lifecycle; added a compact direct entry, read-only bundle rules and project-local styling.
+- Included original references/templates, import helpers, structural checks, geometry checks and exports with provenance hashes and license.
+- Updated component counts, installers and regression tests; added six copied-component helper scenarios.
+- Rewrote the root README in English, removed its ownership/provenance section, and replaced the hero with new generated artwork. Component license files and distribution notices remain in the package.
+- Technical diagrams now show the diagram component; hero artwork is separate from the technical diagram generator.
+
+
 - Extracted the self-contained skill bundle into https://github.com/chinhkrb113/devflow-kit, with a dedicated Git history, README and packaging script.
 - Updated package author/marketplace owner and project URLs; preserved original copyright notices, source pins, vendor licenses and modification history.
 - Retained all eight components, fifteen Superpowers profiles, installers and regression tests. The catalog remains an external source; the website, MCP service and catalog refresh workflows are not part of this repository.

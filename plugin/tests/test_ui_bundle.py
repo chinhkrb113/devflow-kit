@@ -38,7 +38,7 @@ class BundleTests(unittest.TestCase):
         lock = json.loads((ROOT / 'third-party-skills.lock.json').read_text())
         self.assertEqual({s['folder'] for s in lock['skills']},
                          {'frontend-design', 'ui-ux-pro-max', 'taste-skill',
-                          'ponytail', 'caveman', 'ui-taste', 'superpowers'})
+                          'ponytail', 'caveman', 'ui-taste', 'superpowers', 'diagram-design'})
         for skill in lock['skills']:
             base = ROOT / 'skills' / skill['folder']
             if skill.get('source_type') == 'hosted-snapshot':

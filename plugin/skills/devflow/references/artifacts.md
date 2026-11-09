@@ -27,7 +27,7 @@ Use `pending` for delivery status before evidence exists; classify all items by 
 - Screen/state map, fields, validation, navigation, role visibility and server-side permissions.
 - Data entities, constraints, retention, ownership and state transitions.
 - API/command/module contract: input/output, errors, auth, side effects, retry/idempotency where relevant; contract file and validation result.
-- Minimal architecture, dependencies, chosen versions, integration boundaries and material risks.
+- Minimal architecture, dependencies, chosen versions, integration boundaries and material risks. Use [Diagram Design](../../diagram-design/SKILL.md) when a visual clarifies these relationships; retain editable sources, evidence links and current/proposed labels.
 - Links to references and decisions; proposed new behavior clearly distinguished from observations.
 
 ## Interactive prototype record

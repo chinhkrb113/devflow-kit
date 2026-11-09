@@ -9,7 +9,7 @@ const {pathToFileURL} = require('node:url');
   const page = await browser.newPage({deviceScaleFactor: 2, viewport: {width: 1328, height: 768}});
   const checks = [];
   try {
-    for (const name of ['hero', 'architecture', 'workflow', 'portability']) {
+    for (const name of ['architecture', 'workflow', 'portability']) {
       await page.setViewportSize({width:1328,height:768});
       await page.goto(pathToFileURL(path.join(root, 'docs/diagrams', name + '.html')).href, {waitUntil:'networkidle'});
       const size = await page.locator('svg').evaluate(svg => ({width: svg.viewBox.baseVal.width, height: svg.viewBox.baseVal.height}));
