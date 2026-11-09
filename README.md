@@ -2,7 +2,7 @@
 
 **From intent to verified software.**
 
-![DevFlow Kit — AI development skills: clarify, design, build, verify](docs/assets/hero.png)
+![DevFlow Kit — Search first. Build with evidence.](docs/assets/hero.png)
 
 [Get started](#quick-start) · [Architecture](#how-it-fits-together) · [Workflow](#the-development-workflow) · [Skills](#eleven-complementary-skills) · [Verification](#verify-and-package)
 
