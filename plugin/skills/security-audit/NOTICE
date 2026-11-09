@@ -1,0 +1,6 @@
+Security Audit — Cloudflare
+Source: https://github.com/cloudflare/security-audit-skill
+Revision: c1c8a8c1471069fb0e188eeaff69b8e8db6564a8
+License: MIT (see LICENSE)
+DevFlow Kit 0.9.0 retains SKILL.md as GUIDE.md with companions/schema/validators/tests. Adds a compact entry and portability reference. Exposes the unchanged findings text preflight for a bounded trusted-parent stdin adapter. Seven POSIX-assuming CLI tests now declare their file-API prerequisite. Original file-reader protection, evidence semantics, isolation and independent-verification requirements are unchanged. Adds eight stdin transport tests. No sandbox or independent reviewer is supplied by installation.
+The coverage-validator shebang script uses LF line endings for POSIX execution; logic is unchanged.

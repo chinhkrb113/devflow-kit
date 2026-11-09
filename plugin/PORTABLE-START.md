@@ -1,6 +1,6 @@
-# DevFlow Kit — AI Development Skills — 0.8.0
+# DevFlow Kit — AI Development Skills — 0.9.0
 
-Bản portable có một điểm vào `devflow`, chứa đủ chín thành phần. Giữ nguyên toàn bộ thư mục này; đừng chỉ lấy SKILL.md. Bản cài là bản sao độc lập, không phụ thuộc junction, symlink hoặc thư mục tải về.
+Bản portable có một điểm vào `devflow`, chứa đủ mười một thành phần. Giữ nguyên toàn bộ thư mục này; đừng chỉ lấy SKILL.md. Bản cài là bản sao độc lập, không phụ thuộc junction, symlink hoặc thư mục tải về.
 
 ## Cài bằng Python trên Windows/macOS/Linux
 
@@ -17,7 +17,7 @@ Trên Windows có thể dùng `--project "D:\My Project"`; trên macOS/Linux dù
 
 Thêm `--dry-run` để xem đích mà chưa ghi; thêm `--check` để kiểm nội dung bản đã cài. Cài lại cùng bản bỏ qua; xung đột hoặc file đã thay đổi sẽ dừng, không ghi đè. Nếu bị gián đoạn do hết đĩa/quyền, thư mục mới có thể chưa đủ; kiểm tra báo lỗi trước khi dùng. Bộ cài không tự xóa hay sửa một bản đang có.
 
-Bản 0.8.0 kiểm cả file thừa và link trong bản cài, kể cả `SKILL.md`/script giấu trong thư mục cache hoặc evidence; lỗi trả mã 2 và không xóa file. Chỉ miễn trừ báo cáo mặc định, ảnh/log/JSON/video evidence phẳng của mẫu và cache Python `.pyc` dưới `__pycache__`. Đặt dependency, bản thử và báo cáo tùy chỉnh ngoài thư mục skill. Khi nâng cấp, dùng bộ cài mới để kiểm, giữ bản cũ ở nơi riêng ngoài thư mục discovery rồi cài vào đích trống; không trộn phiên bản. Xem [quy tắc kiểm bản cài](bundle/INSTALL.md).
+Bản 0.9.0 kiểm cả file thừa và link trong bản cài, kể cả `SKILL.md`/script giấu trong thư mục cache hoặc evidence; lỗi trả mã 2 và không xóa file. Chỉ miễn trừ báo cáo mặc định, ảnh/log/JSON/video evidence phẳng của mẫu và cache Python `.pyc` dưới `__pycache__`. Đặt dependency, bản thử và báo cáo tùy chỉnh ngoài thư mục skill. Khi nâng cấp, dùng bộ cài mới để kiểm, giữ bản cũ ở nơi riêng ngoài thư mục discovery rồi cài vào đích trống; không trộn phiên bản. Xem [quy tắc kiểm bản cài](bundle/INSTALL.md).
 
 Ngoài ra cho phép đúng năm output của test UI trong `evidence/ui-redesign/`: `ui-states.json` và `mock-320.png`, `mock-390.png`, `mock-768.png`, `mock-1440.png`; không miễn trừ cả cây thư mục. Verifier kiểm lại tính toàn vẹn sau khi chạy test.
 
@@ -56,7 +56,7 @@ Giữ brand/mock đã duyệt. Không có Uizze MCP và native runner thì phầ
 Chỉ đọc; ghi lại những đường dẫn thực sự đã đọc. Không sửa app hoặc bật chế độ trả lời.
 ```
 
-Kiểm tra tool trace có đọc đúng file và references; câu trả lời tự nhận “đã dùng skill” không đủ. Một điểm vào portable không làm mất chín thành phần: agent đọc từng phần theo công việc. [Ma trận tương thích](bundle/HARNESS-COMPATIBILITY.md) phân biệt cài đúng định dạng, discovery và chạy mô hình.
+Kiểm tra tool trace có đọc đúng file và references; câu trả lời tự nhận “đã dùng skill” không đủ. Một điểm vào portable không làm mất mười một thành phần: agent đọc từng phần theo công việc. [Ma trận tương thích](bundle/HARNESS-COMPATIBILITY.md) phân biệt cài đúng định dạng, discovery và chạy mô hình.
 
 Sửa UI nhỏ qua router hoặc gọi trực tiếp đều dùng [chính sách UI chung](bundle/skills/devflow/references/ui-task-policy.md): giữ brand/stack, chỉ đọc phần liên quan, sửa và kiểm tra hành vi bị ảnh hưởng. Không tự sinh design system, vẽ hướng mới hay đọc toàn bộ playbook app chỉ để sửa một control. Khi làm mới hoặc redesign đã được yêu cầu, mới dùng luồng đầy đủ.
 
@@ -89,4 +89,6 @@ Các file profile tên GUIDE.md để tránh tự kích hoạt thêm 15 entry. K
 
 Kiểm tra bản project và user có `reverse-engineered`, `find-reverse-engineered` hoặc `reverse-engineered-*`. Sao lưu đúng bản cũ ra ngoài thư mục discovery; với junction chỉ gỡ liên kết đã xác minh, giữ thư mục đích. Cài bản mới vào `skills/devflow`, chạy `--check`, rồi mở phiên mới. Bộ cài dừng nếu còn tên cũ trong skills root đã chọn; không tự xóa hay ghi đè. Xem [nâng cấp và quay lại bản cũ](bundle/INSTALL.md#upgrade-from-reverse-engineered-06x-and-earlier).
 
-Bản 0.8.0 bổ sung Diagram Design thành chín thành phần. Gọi `devflow` để vẽ kiến trúc/luồng; hướng dẫn [Diagram Design](bundle/skills/diagram-design/SKILL.md) dùng tài nguyên nội bộ, giữ style và đầu ra trong dự án.
+Bản 0.8.0 đã bổ sung Diagram Design thành chín thành phần. Gọi `devflow` để vẽ kiến trúc/luồng; hướng dẫn [Diagram Design](bundle/skills/diagram-design/SKILL.md) dùng tài nguyên nội bộ, giữ style và đầu ra trong dự án.
+
+Bản 0.9.0 có mười một thành phần, bổ sung Open Code Review và Security Audit. Đọc [điều phối review](bundle/skills/devflow/references/review-security.md) để phân biệt review thay đổi, câu hỏi bảo mật và audit toàn diện. OCR CLI là phụ thuộc ngoài; bộ cài không cấu hình tài khoản mô hình.

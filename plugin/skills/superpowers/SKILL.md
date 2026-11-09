@@ -8,6 +8,8 @@ license: MIT; see LICENSE.
 
 This is an adapted, pinned Superpowers 7.0.2 suite, not the upstream auto-bootstrap plugin. Read [compatibility and scope](references/compatibility.md), then only the relevant profile below. There are 15 profiles behind this one discoverable entry. Profiles are `GUIDE.md` files so hosts do not auto-load an additional global `using-superpowers` entry. The upstream body, supporting references, prompts and helpers are retained with documented adaptations.
 
+For review scope and security findings, use [DevFlow review coordination](../devflow/references/review-security.md). The relevant profile supplies engineering discipline; Open Code Review and Security Audit supply specialist review without repeating accepted work.
+
 For an approved task, continue from the unresolved work. For a bug, investigate the cause and reproduce it, fix it, and verify. For an accepted plan, execute it directly; choose sequential execution if the host lacks subagents. For new product decisions, use brainstorming, then a plan sized to the task. [The lifecycle router](../devflow/SKILL.md) owns reference discovery, specifications, mock/reverse and acceptance; Superpowers supplies the engineering steps within that lifecycle. [Ponytail](../ponytail/SKILL.md) keeps the implementation focused, and the [shared UI policy](../devflow/references/ui-task-policy.md) keeps UI scope and brand intact.
 
 | Profile | When to load |

@@ -51,10 +51,10 @@ b+=node(428,312,264,96,'COORDINATION','devflow',['Scope + lifecycle routing'],'f
 b+=node(880,312,320,96,'PROJECT ARTIFACTS','A verifiable result',['Specs, mock, code, evidence'])
 b+=node(408,492,324,104,'ENGINEERING / TWO SKILLS','Build with discipline',['Superpowers: 15 profiles','Ponytail: focused changes'])
 b+=node(64,492,248,104,'COMMUNICATION / OPT-IN','Caveman',['Concise replies on request'],'optional')
-b+=text(880,520,'The agent runs in your host.',14,INK,400,'serif',italic=True)+text(880,548,'Markdown is guidance, not a service.',14,INK,400,'serif',italic=True)
-b+=text(880,584,'Missing tools stay explicit.',12,MUTED)
-b+=footer('SOLID  routing    DASHED  optional extension','9 COMPONENTS / 1 ROUTER')
-save('architecture','DevFlow Kit architecture','The harness reads the devflow router, selects design or engineering guidance, optionally uses references and Caveman, and produces project artifacts.',b)
+b+=arrow('M692 384 H792 Q800 384 800 392 V536 Q800 544 808 544 H876')
+b+=node(880,492,320,104,'SPECIALIST REVIEW / TWO SKILLS','Review + security',['Open Code Review','Security Audit'])
+b+=footer('SOLID  routing    DASHED  optional extension','11 COMPONENTS / 1 ROUTER')
+save('architecture','DevFlow Kit architecture','The harness reads the devflow router, selects design, diagram, engineering or review guidance, optionally uses references and Caveman, and produces project artifacts.',b)
 
 b=chrome('DEVFLOW KIT / 02 / DEVELOPMENT FLOW','From an open question to an accepted outcome.')
 xs=[228,432,636,840,1044]
@@ -82,7 +82,7 @@ save('workflow','DevFlow Kit development flow','Five phases group requirements a
 
 b=chrome('DEVFLOW KIT / 03 / DISTRIBUTION','One complete capsule. Your choice of harness.')
 b+=arrow('M352 336 H476')+arrow('M720 336 H844')
-b+=node(64,252,288,168,'PORTABLE PACKAGE','devflow/',['SKILL.md','bundle/ — nine components','Integrity manifests'])
+b+=node(64,252,288,168,'PORTABLE PACKAGE','devflow/',['SKILL.md','bundle/ — eleven components','Integrity manifests'])
 b+=node(480,280,240,112,'COPY + VERIFY','Installer',['Select one target','Preserve existing content'],'focal')
 b+=f'<rect x="848" y="176" width="352" height="336" rx="6" fill="#fff" stroke="{MUTED}" stroke-width="1"/>'+text(872,208,'HARNESS / PROJECT SKILLS ROOT',8,MUTED,500,'mono')
 for i,(name,folder) in enumerate([('Codex','.agents/skills'),('Claude Code','.claude/skills'),('DeepSeek Harness','.dsh/skills'),('Trae / Trae CN','.trae/skills'),('Other hosts','explicit skills root')]):

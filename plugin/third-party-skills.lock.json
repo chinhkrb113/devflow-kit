@@ -273,7 +273,8 @@
         "Diagnostics timeline recognizes mapped GUIDE.md profile reads and profiles.json inventory while retaining upstream SKILL.md support.",
         "Original Git-blob hashes and retrieved Windows checkout hashes recorded separately for line-ending differences; distributed hashes remain authoritative for install integrity.",
         "subagent-driven-development helper scripts restored to upstream LF bytes (CRLF broke bash on POSIX); find-polluter.sh exits 2 instead of reporting clean when no tests ran, pollution pre-exists, npm is missing or every run failed.",
-        "0.7.0: DevFlow Kit naming and lifecycle links updated in references/compatibility.md, SKILL.md, upstream/skills/diagnosing-superpowers/prompts/skill-timeline.md. Upstream provenance unchanged."
+        "0.7.0: DevFlow Kit naming and lifecycle links updated in references/compatibility.md, SKILL.md, upstream/skills/diagnosing-superpowers/prompts/skill-timeline.md. Upstream provenance unchanged.",
+        "0.9.0: link to shared review/security coordination; original profiles unchanged."
       ],
       "omitted": [
         "Upstream hooks, harness plugin manifests/installers, root developer scripts, website assets and repository test harnesses; no runtime skill resource omitted."
@@ -365,7 +366,7 @@
         "LICENSE": "0da33ed814ee87e72db078f489c4447af72f13d9f25d9e17476f32efd77705fc",
         "profiles.json": "19263d3e03d9c220104cebcd88274bd152665a1f1b0d4c1ce1ed4223aaf5852f",
         "references/compatibility.md": "6eeacd5dda43508280dad4a7ef73a33cad377e3a1fccedcfaf0906d1cbbec876",
-        "SKILL.md": "54e5f70babe19a56b8802fd6b8309df18c0fc1aa79752e239a0fec2448fa7558",
+        "SKILL.md": "08e0cefd8b25e436f55bb0c2c7bbe5b7663aa9d70bd53963eefc1410a042708a",
         "upstream/skills/brainstorming/builder-check-prompt.md": "36d51a4723d6f0a3ce5811a0ea3b3a8424f07533947e1355f5d8cb8cce40c55e",
         "upstream/skills/brainstorming/GUIDE.md": "7d3a39fb8618920607999a9bb39e4e098cd39d1d324875a7755f9f19998b0f38",
         "upstream/skills/brainstorming/scripts/frame-template.html": "7b9418e9939dded0cf8e6a5549a18162b7c7e5495deeefa83a12f3394b81395d",
@@ -547,6 +548,9 @@
         "references/compatibility.md": "7cf2191aa706b40ca049d1d82c38f30a1c6eeb996e216041d90cdee328ea8cbe",
         "SKILL.md": "d4fac741dab65e6a8fc2002554c5d89da21528daa7d63b95b3949fb7158d3d04",
         "upstream/skills/diagnosing-superpowers/prompts/skill-timeline.md": "7a1052991074cb9f5160e41d6c44d0d3b65caf8729443edab06d4e2cedf508b5"
+      },
+      "pre_review_integration_sha256": {
+        "SKILL.md": "54e5f70babe19a56b8802fd6b8309df18c0fc1aa79752e239a0fec2448fa7558"
       }
     },
     {
@@ -1163,6 +1167,97 @@
         "scripts/self_check.py": "444851f6e53f83d50920381df17cdd5f1b7a23cfba9c0ddda27786d78e53e2de",
         "scripts/verify_geometry.py": "d8bdc623d863b5aef6ed921a7bb51febef45904649e2393c7d0f644f7c7222e3",
         "SKILL.md": "845823a0d590b1019ab1622f28e975611e812e2a196fc395d47347cf1097f2e3"
+      }
+    },
+    {
+      "folder": "open-code-review",
+      "repository": "https://github.com/alibaba/open-code-review",
+      "revision": "04deca6721ec4fe2f74a6a0eb069d2a01b3d31cb",
+      "source_path": "skills",
+      "license": "Apache-2.0",
+      "modifications": [
+        "DevFlow Kit 0.9.0 retains the CLI and delegate skill bodies as reference guides behind one entry. Adds scoped host-delegation defaults, capability/provider boundaries, coverage and review handoffs. No executable, global configuration, hook, CI workflow or model credential is distributed."
+      ],
+      "omitted": [
+        "Repository infrastructure, CI, hooks, executable installation and personal configuration."
+      ],
+      "upstream_git_blob_sha256": {
+        "LICENSE": "1945665fdb6968a66ea29438ddee0aee23035365c862e5c4a75b62b303340acf",
+        "skills/open-code-review-delegate/SKILL.md": "1ad19cca0a584e3175e171616a314ee8de5d4fb90c31971a40eff9bb2fb1f2f8",
+        "skills/open-code-review/SKILL.md": "be45ee1303e5106cd36f20bd7854ea1a5bb41b0d6ae045953cb643201bcd715e"
+      },
+      "sha256": {
+        "LICENSE": "1945665fdb6968a66ea29438ddee0aee23035365c862e5c4a75b62b303340acf",
+        "NOTICE": "1c27032bda76c35a04def29136afbf851590ea3f5874b3ace50cdcec59a8affa",
+        "references/cli-guide.md": "be45ee1303e5106cd36f20bd7854ea1a5bb41b0d6ae045953cb643201bcd715e",
+        "references/compatibility.md": "b8949b856a8a8535dac605809c91112851aad0b5f5ec7ef708ed884c7fba436a",
+        "references/delegate-guide.md": "1ad19cca0a584e3175e171616a314ee8de5d4fb90c31971a40eff9bb2fb1f2f8",
+        "SKILL.md": "d86e1a8ab33cd1cd5292ce2937fffbe737b0f07e8f3572fef197224f7f098367"
+      }
+    },
+    {
+      "folder": "security-audit",
+      "repository": "https://github.com/cloudflare/security-audit-skill",
+      "revision": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "source_path": "skills",
+      "license": "MIT",
+      "modifications": [
+        "DevFlow Kit 0.9.0 retains SKILL.md as GUIDE.md with companions/schema/validators/tests. Adds a compact entry and portability reference. Exposes the unchanged findings text preflight for a bounded trusted-parent stdin adapter. Seven POSIX-assuming CLI tests now declare their file-API prerequisite. Original file-reader protection, evidence semantics, isolation and independent-verification requirements are unchanged. Adds eight stdin transport tests. No sandbox or independent reviewer is supplied by installation.",
+        "Normalized CRLF to LF in the coverage-validator shebang script; logic unchanged."
+      ],
+      "omitted": [
+        "Repository infrastructure, CI, hooks, executable installation and personal configuration."
+      ],
+      "upstream_git_blob_sha256": {
+        "LICENSE": "c007a58f958f8a5b2870aa35d8a17aa72a546447aecee6d2b72e19fea530890b",
+        "skills/security-audit/AI-AND-LLM.md": "0d57a4d8b1ce05015e867bc89277aabf80f4a3031beba42df4481fc92027f83b",
+        "skills/security-audit/ATTACK-CLASSES.md": "fff6ce0269696d17bda38bfeb27410bdce820f2299cb68a7ceb81883204a3604",
+        "skills/security-audit/CLIENT-SIDE.md": "e9098dc5da89a996e28c25e9e3e3e976ec777a19c4f05c9a04cd4c0d4a3ce120",
+        "skills/security-audit/CLOUD-AND-DEPLOYMENT.md": "29514d7c3a9e83d48f1f519e70e8b2fde4e1d1ac92d2500737b6c8be718c3b2d",
+        "skills/security-audit/DATA-ISOLATION-AND-LIFECYCLE.md": "5c546940150363cb4039038e2c00c080a8d302e7a2e50f72f3960e4c67801b5e",
+        "skills/security-audit/DESKTOP-MOBILE-AND-LOCAL-IPC.md": "055fec61e744d5ba434cbf0c1f2994b1f83d961f5e43d89cc0bb690d16a11f3b",
+        "skills/security-audit/HUNTING.md": "b980765f1a616a141044b00e3dcbb7c36ec4d7cf43740d85985d0bdbca9cfe91",
+        "skills/security-audit/MEMORY-SAFETY-AND-BINARY.md": "c88390b508fc86838b7b12889499fabf28acfe32ca34f2d4ff655a420264f44f",
+        "skills/security-audit/PROTOCOLS-RPC-AND-MESSAGING.md": "2bc534260d9842cc9a6bb15615e58c5350201008880083da78969bdeb657a7ce",
+        "skills/security-audit/RECONNAISSANCE.md": "a02316fae383754621d312215170479685f85c1142b6c117a9a03c6ad8f907e4",
+        "skills/security-audit/RESOURCE-EXHAUSTION-AND-AVAILABILITY.md": "a9590f9966de194e51dd7c82f930bc910662f0275357e433e33758756755ec8d",
+        "skills/security-audit/SKILL.md": "2a68ab5531dfccedac2b054e0814f2b6517daae9887b3ee40afcc5d8a7063c3a",
+        "skills/security-audit/SUPPLY-CHAIN-AND-RELEASE.md": "c1eb0a8b9a6ab1e979b214ee70fd8fff4c173d4063fd82df82fc5269cb115c17",
+        "skills/security-audit/VALIDATION-AND-REPORTING.md": "943e68578aa1d7031282837d1455cf64d1e95d032c9df09b3f182ce134e89072",
+        "skills/security-audit/WEB-PROTOCOL-AND-AUTH.md": "757c5191cc397ad7145ffe5b6ffa438bdd36fefd351da640267630d05f01bfae",
+        "skills/security-audit/report-schema.json": "7bea150f30dcef07df1859d33d01406953cf600f6a08250e1e59e10f252e2c4c",
+        "skills/security-audit/validate-coverage-ledger.cjs": "db2d1a36031ed1552e1d45cefe1da591ef4eebf2d3f3ee3b0298d07051e3a312",
+        "skills/security-audit/validate-coverage-ledger.test.cjs": "44dd5a6200952fb4f149a3f0dbabdbe116c402c63f0bd2858043207debe39bcc",
+        "skills/security-audit/validate-findings.cjs": "31dabfb5ed2454e4bfa5000fe0f2600df0df9f7ad1781a2fdb9a98a50f507963",
+        "skills/security-audit/validate-findings.test.cjs": "7c91656073b51cbb7e029e33804de97c1d8c0b52f3521fd60e3978133e8cb73a"
+      },
+      "sha256": {
+        "AI-AND-LLM.md": "0d57a4d8b1ce05015e867bc89277aabf80f4a3031beba42df4481fc92027f83b",
+        "ATTACK-CLASSES.md": "fff6ce0269696d17bda38bfeb27410bdce820f2299cb68a7ceb81883204a3604",
+        "CLIENT-SIDE.md": "e9098dc5da89a996e28c25e9e3e3e976ec777a19c4f05c9a04cd4c0d4a3ce120",
+        "CLOUD-AND-DEPLOYMENT.md": "29514d7c3a9e83d48f1f519e70e8b2fde4e1d1ac92d2500737b6c8be718c3b2d",
+        "DATA-ISOLATION-AND-LIFECYCLE.md": "5c546940150363cb4039038e2c00c080a8d302e7a2e50f72f3960e4c67801b5e",
+        "DESKTOP-MOBILE-AND-LOCAL-IPC.md": "055fec61e744d5ba434cbf0c1f2994b1f83d961f5e43d89cc0bb690d16a11f3b",
+        "GUIDE.md": "2a68ab5531dfccedac2b054e0814f2b6517daae9887b3ee40afcc5d8a7063c3a",
+        "HUNTING.md": "b980765f1a616a141044b00e3dcbb7c36ec4d7cf43740d85985d0bdbca9cfe91",
+        "LICENSE": "c007a58f958f8a5b2870aa35d8a17aa72a546447aecee6d2b72e19fea530890b",
+        "MEMORY-SAFETY-AND-BINARY.md": "c88390b508fc86838b7b12889499fabf28acfe32ca34f2d4ff655a420264f44f",
+        "NOTICE": "fa8c8afa6784fe0a29fdf48cd47e475c6f1eb8797386d9bd881a1610ae1d233a",
+        "PROTOCOLS-RPC-AND-MESSAGING.md": "2bc534260d9842cc9a6bb15615e58c5350201008880083da78969bdeb657a7ce",
+        "RECONNAISSANCE.md": "a02316fae383754621d312215170479685f85c1142b6c117a9a03c6ad8f907e4",
+        "references/compatibility.md": "40ab79d9f0edb2d357f9e6d863610fbf330b880f7de1639edce042141b24d55a",
+        "report-schema.json": "7bea150f30dcef07df1859d33d01406953cf600f6a08250e1e59e10f252e2c4c",
+        "RESOURCE-EXHAUSTION-AND-AVAILABILITY.md": "a9590f9966de194e51dd7c82f930bc910662f0275357e433e33758756755ec8d",
+        "SKILL.md": "66edc9dd392ecb87054f3b68f11a7cf595efbef2df188515a0799d50e524e417",
+        "SUPPLY-CHAIN-AND-RELEASE.md": "c1eb0a8b9a6ab1e979b214ee70fd8fff4c173d4063fd82df82fc5269cb115c17",
+        "validate-coverage-ledger.cjs": "2eb280bd2e33c002916f86db9b29f9edfedb6454e5db973c766290465b868ac8",
+        "validate-coverage-ledger.test.cjs": "44dd5a6200952fb4f149a3f0dbabdbe116c402c63f0bd2858043207debe39bcc",
+        "validate-findings.cjs": "3006e262e5cf9d7a76122659affb2fb1419697154001d87b6671e2724f0f8c08",
+        "validate-findings.test.cjs": "db4e5d6e80d66edab69b6be218c50f931b3472179b57655325b700a78bfd82a3",
+        "validate-stdin.cjs": "fdb6fe8c51f9df2b8a946e1ef0392618a789641e43067ba3c76d4d9ebda28a2b",
+        "validate-stdin.test.cjs": "c671aac389ea610fc8bacd77e09ea5ee2831a585cfc146f49c678ee8719e5400",
+        "VALIDATION-AND-REPORTING.md": "943e68578aa1d7031282837d1455cf64d1e95d032c9df09b3f182ce134e89072",
+        "WEB-PROTOCOL-AND-AUTH.md": "757c5191cc397ad7145ffe5b6ffa438bdd36fefd351da640267630d05f01bfae"
       }
     }
   ]

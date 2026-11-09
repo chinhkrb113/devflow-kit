@@ -31,6 +31,8 @@ For implementation/review, use [coding and communication](references/coding-comm
 
 For engineering execution, use the relevant [Superpowers workflow](../superpowers/SKILL.md): planning, root-cause debugging, TDD, review and verification. Its 15 profiles support this lifecycle; they do not restart accepted requirements, change UI direction or require tools absent from the harness.
 
+For change review and security assessment, read [review coordination](references/review-security.md). Open Code Review handles diff coverage and actionable code findings; Security Audit handles trust-boundary analysis and independently verified security records. Keep focused reviews focused and full audits explicitly scoped.
+
 Record outputs, evidence, unresolved dependencies and the next action at each handoff. A rendered screenshot is not an interactive prototype; a prototype is not a working backend; a passing build is not product acceptance. Mark claims observed/executed, inferred or unverified. Missing evidence stays pending or failed, never Pass.
 
 Scale artifacts to the assignment and reuse the project's conventions. A small feature can use one concise record. For a full system, keep traceability from requirements to reference observations, specifications, UI states, implementation and acceptance evidence. Do not publish internal records into a site's public documentation directory by default. Deployment and ongoing operations occur only when included in the user's scope.

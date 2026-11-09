@@ -5,7 +5,7 @@ The README uses a generated brand hero and three editable technical diagrams. Th
 | Asset / source | Purpose | Format |
 |---|---|---|
 | [hero.png](../assets/hero.png) | Product identity and positioning | Generated raster artwork; see [art direction and prompt](hero-artwork.md) |
-| [architecture.html](architecture.html) | Harness, router and nine complementary components | Architecture; eight nodes and seven connectors |
+| [architecture.html](architecture.html) | Harness, router and eleven complementary components | Architecture; nine nodes and eight connectors |
 | [workflow.html](workflow.html) | Work, constraints and outputs across five lifecycle stages | Process with consistent semantic rows |
 | [portability.html](portability.html) | Complete capsule, installer and target roots | Distribution architecture |
 
@@ -38,6 +38,6 @@ The exporter waits for Instrument Serif, Geist and Geist Mono, outputs 2560 × 1
 
 ## Validation
 
-For version 0.8.0, all three technical diagrams passed the bundled structural and geometry checks, SVG export and Chromium render checks. The generated PNGs were inspected visually. The raster hero is checked separately for text accuracy, legibility and README rendering; SVG geometry checks do not apply to that artwork.
+For version 0.9.0, all three technical diagrams passed the bundled structural and geometry checks, SVG export and Chromium render checks. The generated PNGs were inspected visually. The raster hero is checked separately for text accuracy, legibility and README rendering; SVG geometry checks do not apply to that artwork.
 
-These checks establish the reported properties, not a universal aesthetic score or architectural correctness. See the [release verification record](../verification-0.8.0.md).
+These checks establish the reported properties, not a universal aesthetic score or architectural correctness. See the [release verification record](../verification-0.9.0.md).

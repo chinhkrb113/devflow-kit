@@ -45,3 +45,11 @@ For Superpowers, `upstream_sha256` hashes the original Git blobs at the pinned r
 - License: MIT; original notice is included in `skills/diagram-design/LICENSE`.
 - Adaptations: compact DevFlow entry, upstream body retained as `GUIDE.md`, project-local styling and host capability rules, geometry helper relocation and corrected local assets root. See the component `NOTICE` and lock record.
 - Upstream Git-blob SHA-256 and distributed SHA-256 are distinct; the project's customized documentation style is not substituted for the upstream default.
+
+## Open Code Review
+
+Source: https://github.com/alibaba/open-code-review at `04deca6721ec4fe2f74a6a0eb069d2a01b3d31cb`. Apache-2.0 license retained. Both upstream skill guides are preserved as references behind one adapted entry. The executable, providers, extensions and CI examples are not included. See the component NOTICE and provenance lock.
+
+## Security Audit
+
+Source: https://github.com/cloudflare/security-audit-skill at `c1c8a8c1471069fb0e188eeaff69b8e8db6564a8`. MIT license retained. The original guide, companions, schema, validators and tests are included. The bundle adds a compact entry and trusted-parent stdin transport, exposes the existing findings text preflight and marks seven POSIX-dependent test prerequisites. The original file-input protection is unchanged. See the component NOTICE for detail.

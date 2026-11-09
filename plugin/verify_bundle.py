@@ -88,6 +88,18 @@ def main():
         run('bundle-tests', [sys.executable, '-X', 'utf8', '-c', code, 'tests'], ROOT)
         run('catalog-helper-tests', [sys.executable, '-X', 'utf8', '-c', code,
                                    'skills/devflow/tests'], ROOT)
+        # Upstream file-reader cases declare OS capability skips; report them,
+        # while portable stdin transport and schema tests must actually run.
+        run('security-audit-validator-tests', [node, '--test', '--test-reporter=tap',
+            'skills/security-audit/validate-findings.test.cjs',
+            'skills/security-audit/validate-coverage-ledger.test.cjs',
+            'skills/security-audit/validate-stdin.test.cjs'], ROOT)
+        output = report['checks'][-1]['stdout']
+        report['security_validator_counts'] = {
+            key: int(re.search(r'^# ' + key + r' (\d+)$', output, re.M).group(1))
+            for key in ('tests', 'pass', 'fail', 'skipped')}
+        if report['security_validator_counts']['skipped']:
+            report['capability_limits'] = ['Some upstream security file-reader tests require OS capabilities unavailable on this host; see explicit TAP skips. Stdin transport is tested separately.']
         if args.with_example:
             example = ROOT / 'examples/appointment-demo'
             module = args.playwright_module or 'playwright'

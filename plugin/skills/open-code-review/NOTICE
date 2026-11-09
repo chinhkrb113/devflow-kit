@@ -1,0 +1,5 @@
+Open Code Review — Alibaba contributors
+Source: https://github.com/alibaba/open-code-review
+Revision: 04deca6721ec4fe2f74a6a0eb069d2a01b3d31cb
+License: Apache-2.0 (see LICENSE)
+DevFlow Kit 0.9.0 retains the CLI and delegate skill bodies as reference guides behind one entry. Adds scoped host-delegation defaults, capability/provider boundaries, coverage and review handoffs. No executable, global configuration, hook, CI workflow or model credential is distributed.

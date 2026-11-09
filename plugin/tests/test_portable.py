@@ -43,7 +43,7 @@ class PortableTests(unittest.TestCase):
             self.assertFalse(dest.is_symlink())
             self.assertFalse(dest.is_junction())
             self.assertTrue((dest / 'SKILL.md').is_file())
-            self.assertEqual(result['components'], 9)
+            self.assertEqual(result['components'], 11)
             self.assertEqual(self.invoke(*args)['status'], 'already-installed')
             self.invoke(*args, '--check')
 
@@ -171,7 +171,7 @@ class PortableTests(unittest.TestCase):
             for link in re.findall(r'\]\(([^)]+)\)', files[entry].decode('utf-8')):
                 if '://' not in link and not link.startswith('#'):
                     self.assertIn(link.split('#')[0], files, link)
-        self.assertEqual(sum(n.startswith('bundle/skills/') and n.endswith('/SKILL.md') for n in files), 9)
+        self.assertEqual(sum(n.startswith('bundle/skills/') and n.endswith('/SKILL.md') for n in files), 11)
 
     def test_verifier_checks_outer_entry_and_path_traversal(self):
         source = self.work / 'source'

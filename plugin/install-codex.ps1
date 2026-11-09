@@ -1,7 +1,7 @@
 param([string]$SkillsRoot = (Join-Path $env:USERPROFILE '.agents\skills'))
 $ErrorActionPreference = 'Stop'
 $bundleRoot = $PSScriptRoot
-$folders = @('devflow', 'frontend-design', 'ui-ux-pro-max', 'taste-skill', 'ponytail', 'caveman', 'ui-taste', 'superpowers', 'diagram-design')
+$folders = @('devflow', 'frontend-design', 'ui-ux-pro-max', 'taste-skill', 'ponytail', 'caveman', 'ui-taste', 'superpowers', 'diagram-design', 'open-code-review', 'security-audit')
 if (Test-Path -LiteralPath $SkillsRoot) {
     $legacy = @(Get-ChildItem -LiteralPath $SkillsRoot -Force | Where-Object {
         $_.Name -in @('reverse-engineered', 'find-reverse-engineered') -or $_.Name -like 'reverse-engineered-*'

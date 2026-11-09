@@ -1,5 +1,14 @@
 # 0.7.1 — Independent repository maintained by chinhkrb113
 
+## 0.9.0 — Code review and security audit (2026-11-10)
+
+- Added Open Code Review and Security Audit as components ten and eleven, with pinned source revisions, original licenses and explicit adaptations.
+- Coordinated review routing across the portable entry, DevFlow lifecycle and Superpowers. OCR host-model delegation is preferred; full security audits remain explicitly scoped.
+- Preserved Security Audit's file-reader protections and added bounded trusted-parent stdin validation for Windows and other hosts without the required file APIs.
+- Added copied-component checks and security schema/transport regression suites. OS-dependent skips are reported separately from passing checks.
+- Updated installation, documentation, architecture diagrams and package counts. No OCR executable, model account, sandbox, hook or CI workflow is installed.
+
+
 ## 0.8.0 — Architecture diagrams and English documentation (2026-11-10)
 
 - Added Diagram Design as the ninth component, pinned to upstream revision `6a7f19fcc132b39b126bea90167679b46b14bcc4`.

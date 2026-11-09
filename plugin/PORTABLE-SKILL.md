@@ -1,13 +1,13 @@
 ---
 name: devflow
-description: Develop software from reference systems through requirements, specifications, architecture diagrams, interactive mock UI, optional reverse analysis, construction and acceptance. Also use for reference-tool discovery, frontend design or review, disciplined engineering with Superpowers, focused implementation with Ponytail, or requested concise replies with Caveman.
+description: Develop software from reference systems through requirements, specifications, architecture diagrams, interactive mock UI, optional reverse analysis, construction and acceptance. Also use for reference-tool discovery, frontend design or review, disciplined engineering with Superpowers, scoped code review, security audits, focused implementation with Ponytail, or requested concise replies with Caveman.
 license: See bundle/THIRD_PARTY_NOTICES.md for component licenses.
 compatibility: Requires a host that can read local Markdown and referenced files. Optional helpers need Python or Node; browser and native checks require the corresponding tools. Plain chat can provide guidance but cannot execute these checks.
 ---
 
 # DevFlow Kit — AI Development Skills
 
-This entry contains nine components in one self-contained skill; Superpowers contains 15 on-demand workflow profiles. Resolve all links relative to this installed SKILL.md, never relative to the project's working directory or another personal installation. Load only the component needed for the user's task:
+This entry contains eleven components in one self-contained skill; Superpowers contains 15 on-demand workflow profiles. Resolve all links relative to this installed SKILL.md, never relative to the project's working directory or another personal installation. Load only the component needed for the user's task:
 
 | Task | Read |
 |---|---|
@@ -15,6 +15,8 @@ This entry contains nine components in one self-contained skill; Superpowers con
 | Architecture, workflow, sequence, data model or other technical diagrams | [Diagram Design](bundle/skills/diagram-design/SKILL.md) |
 | Interactive mock, frontend construction or UI review | [UI coordination](bundle/skills/devflow/references/ui-workflow.md), then relevant component files |
 | Coding, fixes or review with minimal complete changes | [Coding coordination](bundle/skills/devflow/references/coding-communication.md) and [Ponytail](bundle/skills/ponytail/SKILL.md) |
+| Code changes, commits or pull-request review | [Review coordination](bundle/skills/devflow/references/review-security.md), then [Open Code Review](bundle/skills/open-code-review/SKILL.md) |
+| Security questions, focused vulnerability review or explicitly scoped full audit | [Review coordination](bundle/skills/devflow/references/review-security.md), then [Security Audit](bundle/skills/security-audit/SKILL.md) |
 | Requested concise replies / Caveman | [Caveman](bundle/skills/caveman/SKILL.md); installation/auditing is not mode activation |
 | Superpowers, implementation planning, TDD, debugging or evidence-based review | [Superpowers](bundle/skills/superpowers/SKILL.md), then its relevant profile; continue accepted work and preserve the focused UI route |
 
