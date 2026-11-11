@@ -18,15 +18,16 @@ From the extracted `plugin` directory on macOS/Linux (instructions supplied, not
 
 ```sh
 bundle_dir="$PWD"
+bundle_skills='devflow frontend-design ui-ux-pro-max taste-skill ponytail caveman ui-taste superpowers diagram-design open-code-review security-audit'
 mkdir -p "$HOME/.agents/skills"
-for skill in devflow frontend-design ui-ux-pro-max taste-skill ponytail caveman ui-taste superpowers; do
+for skill in $bundle_skills; do
   destination="$HOME/.agents/skills/devflow-kit-$skill"
   if [ -e "$destination" ] || [ -L "$destination" ]; then
     printf 'Inspect existing entry before installing: %s\n' "$destination" >&2
     exit 1
   fi
 done
-for skill in devflow frontend-design ui-ux-pro-max taste-skill ponytail caveman ui-taste superpowers; do
+for skill in $bundle_skills; do
   ln -s "$bundle_dir/skills/$skill" "$HOME/.agents/skills/devflow-kit-$skill"
 done
 ```
